@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MiniExpress.Data;
 
@@ -10,9 +11,11 @@ using MiniExpress.Data;
 namespace MiniExpress.Migrations
 {
     [DbContext(typeof(BdContext))]
-    partial class BdContextModelSnapshot : ModelSnapshot
+    [Migration("20250725173628_version7")]
+    partial class version7
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.6");

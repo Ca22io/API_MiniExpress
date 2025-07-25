@@ -8,15 +8,18 @@ namespace MiniExpress.Models
         [Key]
         public int IdEndereco { get; set; }
 
-        public int IdUsuario { get; set; } // Chave estrangeira para o usuário
+        public int? IdUsuario { get; set; } // Chave estrangeira para o usuário
 
         [ForeignKey("IdUsuario"), NotMapped] // Especifica a FK
         public UsuarioModel? Usuario { get; set; } // Propriedade de Navegação
 
-        public int IdLoja { get; set; } // Chave estrangeira para a loja (opcional)
+        public int? IdLoja { get; set; } // Chave estrangeira para a loja (opcional)
 
         [ForeignKey("IdLoja"), NotMapped] // Especifica a FK
         public LojaModel? Loja { get; set; } // Propriedade de Navegação
+
+        [Required]
+        public bool? Principal { get; set; } // Indica se é o endereço principal do usuário ou loja
 
         [MaxLength(100)]
         public string? Logradouro { get; set; } // Ex: Rua, Avenida, etc.
