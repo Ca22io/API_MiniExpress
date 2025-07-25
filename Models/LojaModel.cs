@@ -26,6 +26,11 @@ namespace MiniExpress.Models
         [EmailAddress]
         public string? Email { get; set; } // E-mail da loja
 
+        public int IdEndereco { get; set; } // Chave estrangeira para o endereço
+
+        [ForeignKey("IdEndereco"), NotMapped] // Especifica a FK
+        public EnderecoModel? Endereco { get; set; } // Propriedade de Navegação para o endereço
+
         public DateTime DataCadastro { get; set; } // Data de cadastro da loja
     }
 }

@@ -11,6 +11,6 @@ namespace MiniExpress.Data
         public DbSet<Models.PerfilModel> Perfis { get; set; }
         public DbSet<Models.UsuarioModel> Usuarios { get; set; }
         public DbSet<Models.LojaModel> Lojas { get; set; }
-        
+        public DbSet<Models.EnderecoModel> Enderecos { get; set; }
     }
 }
