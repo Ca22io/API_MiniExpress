@@ -5,7 +5,7 @@ Minha solução é fazer um sistema onde tudo isso esteja disponivel para que as
 
 # Clonando o projeto usando git
 
-git clone https://github.com/Ca22io/MiniExpress.git
+git clone https://github.com/Ca22io/API_MiniExpress.git
 
 # O que é preciso para rodar a api?
 
