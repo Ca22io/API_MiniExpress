@@ -18,8 +18,8 @@ namespace MiniExpress.Models
         [ForeignKey("IdLoja"), NotMapped] // Especifica a FK
         public LojaModel? Loja { get; set; } // Propriedade de Navegação
 
-        [Required]
-        public bool? Principal { get; set; } // Indica se é o endereço principal do usuário ou loja
+        [MaxLength(10)]
+        public string? Principal { get; set; } // Indica se é o endereço principal do usuário ou loja
 
         [MaxLength(100)]
         public string? Logradouro { get; set; } // Ex: Rua, Avenida, etc.

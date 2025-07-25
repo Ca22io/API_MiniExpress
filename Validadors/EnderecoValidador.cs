@@ -22,7 +22,7 @@ namespace MiniExpress.Validadors
 
             RuleFor(e => e.CEP)
                 .NotEmpty().WithMessage("O CEP é obrigatório.")
-                .Length(8).WithMessage("O CEP deve ter 8 caracteres.");
+                .Length(9).WithMessage("O CEP deve ter 9 caracteres.");
 
             RuleFor(e => e.Cidade)
                 .NotEmpty().WithMessage("A cidade é obrigatória.")
